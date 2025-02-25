@@ -1,0 +1,80 @@
+ht<!DOCTYPE html>
+<html lang="lo">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my-go-in-one</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>ສະບາຍດີ! ຂ້ອຍຊື່ [ຊື່ຂອງເຈົ້າ]</h1>
+        <h1 id="title">ສະບາຍດີ!</h1>
+        <button onclick="changeText()">ກົດຂ້ອຍ!</button>
+        <button onclick="changeColor()">ປ່ຽນສີ</button>
+        <button onclick="changeBg()">ປ່ຽນສີ່ພື້ນຫຼັງ</button>
+        <button onclick="changeRandomBg()">ປ່ຽນສີສຸ່ມ</button>
+        <button id="colorButton" onclick="changeRandomBg()">ປ່ຽນສີ</button>
+        <button id="myButton">ກົດຂ້ອຍ</button>
+        <button id="btn">ປ່ຽນສີເຫຼືອງ</button>
+        <script>
+            document.getElementById("myButton").addEventListener("click", function() {
+            alert("ກົດແລ້ວ!");
+            });
+            function changeColor() {
+                document.body.style.background = "yellow"
+            }
+            document.getElementById("btn").addEventListener("click", changeColor);
+
+        </script>
+        <script>
+            function changeRandomBg() {
+                let randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+                document.body.style.backgroundColor = randomColor;
+                let button = document.getElementById("colorButton");
+                button.innerText = "ສີ: " + randomColor;
+                button.style.backgroundColor = randomColor; // ປ່ຽນສີປຸ່ມ
+                button.style.color = "#FFFFFF";
+            }
+            function changeBg() {
+                document.body.style.backgroundColor ="lightblue";
+            }
+            function changeText() {
+                document.getElementById("title").innerText = "ຂໍ້ຄວາມປ່ຽນແລ້ວ!";
+            }
+            function changeColor() {
+                document.getElementById("title").style.color = "red";
+            }
+        </script>
+        <p>Web Developer ທີ່ມີໃຈຮັກການພັດທະນາເວັບ</p>
+    </header>
+    <section>
+        <h2>ຜົນງານຂອງຂ້ອຍ</h2>
+    <div class="project-container">
+        <div class="project-card">
+            <h3>ເວັບໄຊທ໌ຂອງຂ້ອຍ</h3>
+            <p>ເປັນໂປຣເຈັກທີ່ຂ້ອຍສ້າງໃນ HTML & CSS</p>
+        </div>
+        <div class="project-card">
+            <h3>ແອັບເມື່ອ 2 ເດືອນກ່ອນ</h3>
+            <p>ເຮັດໃນ JavaScript ໃຊ້ Flexbox</p>
+        </div>
+    </div>
+
+
+        <h2>ຜົນງານຂອງຂ້ອຍ</h2>
+        <p>ເຮັດເວັບ, ອອກແບບ UI, ຂຽນ HTML/CSS</p>
+    </section>
+    <p id="text">ຂໍ້ຄວາມນີ້ຈະປ່ຽນສີ!</p>
+    <button id="changeColorButton">ປ່ຽນສີຂໍ້ຄວາມ</button>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>ຕິດຕໍ່: [ອີເມວ/ໂທລະສັບ]</p>
+    </footer>
+</body>
+</html>
+
